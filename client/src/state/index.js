@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   isCartOpen: false,
@@ -7,7 +7,7 @@ const initialState = {
 };
 
 export const cartSlice = createSlice({
-  name: "cart",
+  name: 'cart',
   initialState,
   reducers: {
     setItems: (state, action) => {
@@ -36,6 +36,7 @@ export const cartSlice = createSlice({
         if (item.id === action.payload.id && item.count > 1) {
           item.count--;
         }
+
         return item;
       });
     },
